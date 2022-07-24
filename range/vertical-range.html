@@ -10,14 +10,14 @@
 </head>
 <body>
   <div class="container">
-    <div id="number">0 </div>
+    <div id="number">10 </div>
     <input type="range" class="range" min="0" max="100" value="30" id="slider">
   </div>
 </body>
 <script>
   var slider = document.getElementById("slider");
   var number = document.getElementById("number");
-  slider.ontouchmove.oninput=function(){
+  slider.ontouchmove = function(){
     number.innerHTML = slider.value;
   }
 </script>

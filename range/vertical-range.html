@@ -17,7 +17,7 @@
 <script>
   var slider = document.getElementById("slider");
   var number = document.getElementById("number");
-  slider.oninput=function(){
+  slider.ontouchmove.oninput=function(){
     number.innerHTML = slider.value;
   }
 </script>

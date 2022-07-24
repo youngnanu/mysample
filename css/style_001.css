@@ -83,7 +83,7 @@ body{background: var(--light-bg); overflow: hidden;}
   padding-bottom: 60px; margin: 10px; min-height: 100vh;
 }
 .container .content {  padding: 15px; background: var(--bg); border-radius: 5px;border: var(--border); box-shadow: var(--box-shadow) ;}
-.container .content img { margin-bottom: 10px; border-radius: 5px;}
+.container .content img { margin-bottom: 10px; border-radius: 5px; width: 100%;}
 .container .content h3 { color: var(--black); font-size: 20px;}
 .container .content p { color: var(--light-color); font-size: 15px;}
 .container .content .btn {

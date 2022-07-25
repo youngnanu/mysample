@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <style>
+    html, body {padding: 0; margin: 0;}
+    .graph-wrap { width: 90%; padding: 0; margin: 0 auto;}
+    .graph-wrap li { display: flex; align-items: center; margin: 15px 0;}
+    .graph-wrap li .tit { min-width: 130px;}
+    .graph-wrap li .gr-back { background: #f0f0f0; flex: 1; height: 30px; position: relative;}
+    .graph-wrap li .gr-back .gr-color { background: #ffcc00; display: inline-block; text-align: center; height: 100%; border-radius: 0 30px 30px 0;}
+    .graph-wrap li .gr-back .gr-color b {line-height: 30px; display: inline-block; padding: 0 10px;} 
+    .graph-wrap li .gr-back .gr-color b.left { position: absolute; }
+  </style>
+</head>
+<body>
+  <ul class="graph-wrap">
+    <li><div class="tit">자산관리</div><div class="gr-back"><span class="gr-color" style="width:80%"><b>80</b></span></div></li>
+    <li><div class="tit">자산관리</div><div class="gr-back"><span class="gr-color" style="width:5%"><b>5</b></span></div></li>
+    <li><div class="tit">자산관리</div><div class="gr-back"><span class="gr-color" style="width:50%"><b>50</b></span></div></li>
+    <li><div class="tit">자산관리</div><div class="gr-back"><span class="gr-color" style="width:10%"><b>10</b></span></div></li>
+  </ul>
+</body>
+<script>
+  $(function(){
+    var $item = $('.graph-wrap li');
+    $item.each(function(idx, obj){
+      var score = $(obj).find('span.gr-color b')
+      var backWidth = $(obj).find('span.gr-color').width();
+      var txtWidth = score.outerWidth();
+      if(backWidth < txtWidth){
+        score.addClass('left').css({left:backWidth});
+      }else {
+        score.removeClass('left')
+      }
+    })
+    
+  });
+</script>
+</html>
